@@ -41,7 +41,7 @@
         </div>
         <div class="form-row" >
             <input type="number" class="form-control" placeholder="Prix" name="prix" value="<?php echo $post['prix']; ?>"></input>
-            <input class="form-control" placeholder="Description" name="description" value="<?php echo $post['description']; ?>"></input>
+            <textarea class="form-control" placeholder="Description" name="description" ><?php echo $post['description']; ?></textarea>
         </div>
         <div >        
             <input type="submit" value="Modifier" class="btn btn-primary w-100">
