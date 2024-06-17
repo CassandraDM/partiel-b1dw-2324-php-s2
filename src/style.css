@@ -53,7 +53,7 @@ nav {
 
 .post-list {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   width: 100%;
   gap: 20px;
@@ -66,7 +66,7 @@ nav {
 }
 
 .post {
-  width: 600px;
+  width: 400px;
   background-color: rgb(135, 165, 255);
   padding: 20px;
   border-radius: 8px;
