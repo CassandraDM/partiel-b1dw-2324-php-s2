@@ -6,7 +6,7 @@
 <div class="post-list-header">
     <h1>LISTES DES BILLETS</h1>
     <div class="add-post">
-        <a href=""><i class="fa-solid fa-plus"></i></a>
+        <a href="create-post.php"><i class="fa-solid fa-plus"></i></a>
     </div>
 </div>
 
@@ -32,7 +32,9 @@
 
     <div class="post">
         <div class="post-header">
-            <h2><?= $post['categorie'] ?></h2>
+            <h2>Football</h2>
+        </div>
+            <h3><?= $post['categorie'] ?></h3>
             <h3><?= $post['groupe'] ?></h3>
             <p><?= $post['equipe1'] ?></p>
             <p><?= $post['equipe2'] ?></p>
@@ -43,7 +45,7 @@
             <div class="post-actions">
                
             </div>
-        </div>
+        
 
     </div>
     <?php endforeach ?>
