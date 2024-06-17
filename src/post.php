@@ -16,7 +16,7 @@
         $connectDatabase->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         // Prepare request
-        $request = $connectDatabase->prepare("SELECT * FROM post ORDER BY date_heure DESC");
+        $request = $connectDatabase->prepare("SELECT * FROM post ORDER BY prix DESC");
         
         // Execute request
         $request->execute();
@@ -44,6 +44,7 @@
             <p><?= $post['description'] ?></p>
             <div class="post-actions">
                 <a href="scripts/delete-post-script.php?id=<?= $post['id'] ?>" class="action"><i class="fa-solid fa-trash"></i></a>
+                <a href="edit-post.php?id=<?= $post['id'] ?>" class="action"><i class="fa-solid fa-edit"></i></a>
             </div>
         
 
