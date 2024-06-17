@@ -1,3 +1,9 @@
+h2,
+h3,
+p {
+  margin: 0;
+}
+
 body {
   background-color: rgb(205, 215, 245) !important;
 }
@@ -20,7 +26,15 @@ nav {
 .post-list-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 10px;
+}
+
+.post-list-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
 }
 
 .add-post {
@@ -56,6 +70,9 @@ nav {
   background-color: rgb(135, 165, 255);
   padding: 20px;
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 
   img {
     width: 100%;
@@ -103,4 +120,22 @@ select {
   padding: 10px;
   border-radius: 4px;
   border: 1px solid rgb(100, 125, 215);
+}
+
+.post-row {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.post-element {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.post-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
