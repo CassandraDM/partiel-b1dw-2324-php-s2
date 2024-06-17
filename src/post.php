@@ -10,13 +10,29 @@
     </div>
 </div>
 
+<form method="post" action="">
+    <select name="sort" id="sort">
+        <option value="asc">Sort by ascending (prix)</option>
+        <option value="desc">Sort by descending (prix)</option>
+    </select>
+    <input type="submit" value="Sort">
+    </form>
+
 <div class="post-list">
     <?php
         $connectDatabase = new PDO("mysql:host=db;dbname=wordpress", "root", "admin");
         $connectDatabase->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         // Prepare request
-        $request = $connectDatabase->prepare("SELECT * FROM post ORDER BY prix DESC");
+        $sortOption = $_POST['sort'] ?? 'desc';
+
+        if  ($sortOption === 'asc') {
+            $request = $connectDatabase->prepare("SELECT * FROM post ORDER BY prix ASC");
+        } else if ($sortOption === 'desc') {
+            $request = $connectDatabase->prepare("SELECT * FROM post ORDER BY prix DESC");
+        } else {
+            $request = $connectDatabase->prepare("SELECT * FROM post ORDER BY prix DESC");
+        }
         
         // Execute request
         $request->execute();
