@@ -43,7 +43,7 @@
             <p><?= $post['prix'] ?></p>
             <p><?= $post['description'] ?></p>
             <div class="post-actions">
-                
+                <a href="scripts/delete-post-script.php?id=<?= $post['id'] ?>" class="action"><i class="fa-solid fa-trash"></i></a>
             </div>
         
 
